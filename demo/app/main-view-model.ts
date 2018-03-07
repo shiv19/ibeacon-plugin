@@ -1,14 +1,14 @@
-import { Observable } from 'tns-core-modules/data/observable';
-import { IbeaconPlugin } from 'nativescript-ibeacon-plugin';
+import { Observable } from "tns-core-modules/data/observable";
+import { Ibeacon } from "nativescript-ibeacon";
 
 export class HelloWorldModel extends Observable {
-  public message: string;
-  private ibeaconPlugin: IbeaconPlugin;
+    public message: string;
+    private ibeacon: Ibeacon;
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.ibeaconPlugin = new IbeaconPlugin();
-    this.message = this.ibeaconPlugin.message;
-  }
+        this.ibeacon = new Ibeacon();
+        this.message = this.ibeacon.message;
+    }
 }
